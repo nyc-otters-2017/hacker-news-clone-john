@@ -5,7 +5,7 @@
       <td><p><strong>Title:</strong> <%= post.title.upcase %></td>
       <td><strong>Description:</strong> <%= post.description %></td>
       <td><%= link_to 'Show', post_path(post) %></td>
-      <td><%= link_to 'Edit', '#' %></td></p>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td></p>
     </tr>
   <% end %>
 
