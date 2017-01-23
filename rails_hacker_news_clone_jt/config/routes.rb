@@ -4,11 +4,14 @@ Rails.application.routes.draw do
   get '/posts/new' => 'posts#new'
   post '/posts' => 'posts#create', as: 'posts'
   get '/posts/:id' => 'posts#show', as: 'post'
-  get '/posts/:id/edit' => 'posts#edit'
+  get '/posts/:id/edit' => 'posts#edit', as: 'edit_post'
+  patch '/posts/:id' => 'posts#update'
 
   get '/users/new' => 'users#new'
   post '/users' => 'users#create', as: 'users'
   get '/users/:id' => 'users#show', as: 'user'
+  get '/users/:id/edit' => 'users#edit', as: 'edit_user'
+  patch '/users/:id' => 'users#update'
   delete '/users/:id' => 'users#destroy'
 
   get '/login' => 'sessions#new'
