@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
+    @post = Post.new(post_params)
     if @post.save
       redirect_to @post
     else
@@ -29,7 +29,6 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      # debugger
       params.require(:post).permit(:title, :description)
     end
 end
