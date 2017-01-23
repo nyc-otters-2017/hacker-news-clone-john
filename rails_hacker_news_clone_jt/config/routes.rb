@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   delete '/users/:id' => 'users#destroy'
 
   get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+  post '/login' => 'sessions#create', as: 'logins'
   delete '/logout' => 'sessions#destroy'
 end
