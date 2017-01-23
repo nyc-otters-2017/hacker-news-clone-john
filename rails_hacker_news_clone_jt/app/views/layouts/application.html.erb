@@ -14,7 +14,11 @@
         <h1>Hacker News Clone</h1>
         <%= link_to 'Home', root_path %>
         <% if logged_in? %>
+          <%= link_to 'New Post', posts_new_path %>
+          <%= link_to 'Logout', '#' %>
         <% else %>
+          <%= link_to 'Create Account', '#' %>
+          <%= link_to 'Login', '#' %>
         <% end %>
       </nav>
     </header>
