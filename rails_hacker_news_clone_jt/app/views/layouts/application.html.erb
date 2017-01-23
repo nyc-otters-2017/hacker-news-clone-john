@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <header class="navbar-fixed">
+      <nav>
+        <h1>Hacker News Clone</h1>
+        <%= link_to 'Home', root_path %>
+        <% if logged_in? %>
+        <% else %>
+        <% end %>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
