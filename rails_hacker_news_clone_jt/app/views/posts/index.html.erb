@@ -2,10 +2,10 @@
 <div class="posts-container">
   <% @posts.each do |post| %>
     <tr>
-      <td><strong>Title:</strong> <%= post.title.upcase %></td>
+      <td><p><strong>Title:</strong> <%= post.title.upcase %></td>
       <td><strong>Description:</strong> <%= post.description %></td>
-      <td><%= link_to 'Show', '#' %></td>
-      <td><%= link_to 'Edit', '#' %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
+      <td><%= link_to 'Edit', '#' %></td></p>
     </tr>
   <% end %>
 
