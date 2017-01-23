@@ -1,0 +1,14 @@
+<h2>All Posts</h2>
+<div class="posts-container">
+  <% @posts.each do |post| %>
+    <tr>
+      <td><strong>Title:</strong> <%= post.title.upcase %></td>
+      <td><strong>Description:</strong> <%= post.description %></td>
+      <td><%= link_to 'Show', '#' %></td>
+      <td><%= link_to 'Edit', '#' %></td>
+    </tr>
+  <% end %>
+
+<%= link_to 'New Post', '#' %>
+
+</div>
