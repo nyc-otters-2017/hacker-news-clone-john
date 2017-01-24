@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   patch '/users/:id' => 'users#update'
   delete '/users/:id' => 'users#destroy'
 
+  get '/comments/new' => 'comments#new'
+
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create', as: 'logins'
   delete '/logout' => 'sessions#destroy'
