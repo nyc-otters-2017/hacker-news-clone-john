@@ -1,0 +1,19 @@
+<h2>Edit Profile</h2>
+
+<%= form_for @user, url: user_path(@user), method: 'patch' do |f| %>
+  <%= render 'user_errors'%>
+
+  <%= f.label :username, "Change Username:" %><br>
+  <%= f.text_field :username %><br><br>
+
+  <%= f.label :email, "Change Email:" %><br>
+  <%= f.email_field :email %><br><br>
+
+  <%= f.label :password, "Must Enter Current Password or New Password to Submit Changes:" %><br>
+  <%= f.password_field :password %><br><br>
+
+  <%= f.submit "Edit" %>
+
+<% end %>
+
+<br><%= link_to 'Back', root_path %>

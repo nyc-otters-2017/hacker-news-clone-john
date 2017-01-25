@@ -1,0 +1,7 @@
+<dl>
+  <dt><strong>Username:</strong> <%= @user.username %></dt><br>
+  <dt><strong>Email:</strong> <%= @user.email %></dt><br>
+  <dt><strong>Number of Posts:</strong> <%= @user.posts.count %></dt><br>
+</dl>
+
+<%= link_to 'Edit Profile', edit_user_path %>
