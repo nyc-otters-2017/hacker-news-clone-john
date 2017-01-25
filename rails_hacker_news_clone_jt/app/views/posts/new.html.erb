@@ -1,5 +1,11 @@
 <h2>Create a Post</h2>
 
+<% flash.each do |key, value| %>
+  <%= content_tag(:div, class: "alert alert=#{key}") do %>
+    <%= value %>
+  <% end %>
+<% end %>
+
 <%= form_for @post, url: posts_path do |f| %>
   <%= render 'post_errors' %>
 

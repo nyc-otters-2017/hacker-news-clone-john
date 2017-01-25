@@ -12,11 +12,16 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
-    if @post.save
-      redirect_to @post
-    else
+    if !logged_in?
+      flash.now[:danger] = "You must be logged in to create post."
       render 'new'
+    else
+      @post = current_user.posts.new(post_params)
+      if @post.save
+        redirect_to @post
+      else
+        render 'new'
+      end
     end
   end
 
