@@ -1,7 +1,7 @@
 <h2>Login</h2>
 
 <% flash.each do |key, value| %>
- <%= content_tag(:div, class: "alert alert-#{key} alert-dismissable") do %>
+ <%= content_tag(:div, class: "alert alert-#{key}") do %>
   <%= value %>
  <% end %>
 <% end %>
